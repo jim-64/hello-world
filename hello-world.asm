@@ -6,14 +6,18 @@
 	.macpack	cbm
 	.macpack	longbranch
 	
-	sym_CHROUT = $ffd2
+	kernal_CHROUT = $ffd2
 
 start:
 
 ; clear screen
 	lda #34
-	jsr $ffd2
-	jsr $ffd2
+	jsr kernal_CHROUT
+	lda #34
+	jsr kernal_CHROUT
 	
 exit:	
 	rts
+	
+; text strings
+text_hello_world: scrcode "hello world!"
