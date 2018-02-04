@@ -13,6 +13,7 @@ start:
 ; clear screen
 	lda #34
 	jsr $ffd2
+	jsr $ffd2
 	
 exit:	
 	rts
